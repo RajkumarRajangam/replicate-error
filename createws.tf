@@ -9,3 +9,8 @@ module "tfe-workspace" {
   organization_name = var.organization_name
   workspace_name = var.workspace_name
 }
+
+  variable "organization_name" {}
+  variable "workspace_name" {}
+  variable "hostname" {}
+  variable "tfe_token" {}
