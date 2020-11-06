@@ -3,9 +3,9 @@ provider "tfe" {
   token = var.tfe_token
 }
 
-module "tfe-workspaces" {
-  source = "git::https://gitlab.service.koin.v2.minerva.loc/plattform/compliance/modules/terraform-tfe-tfe-workspace.git?ref=v1.0.6"
-  //New structure
+module "tfe-workspace" {
+  source  = "app.terraform.io/tenant-raj/tfe-workspace/tfe"
+  version = "1.0.1"
+  organization_name = var.organization_name
   workspace_name = var.workspace_name
-  vcs_repo_identifier = var.vcs_repo_identifier
 }
